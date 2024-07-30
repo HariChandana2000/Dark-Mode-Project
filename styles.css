@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#toggle-container {
+  width: 120px;
+  height: 60px;
+  margin: 50px auto;
+  background-color: #222;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  position: relative;
+  cursor: pointer;
+  padding: 8px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 80px;
+  font-size: 5rem;
+}
+
+#circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  transition: transform 0.5s, background-color 0.5s;
+}
+
+#sun-img {
+  width: 100px;
+  height: 100px;
+  margin-top: 30px;
+  animation-name: moveSun;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes moveSun {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+
+  25% {
+    width: 150px;
+    height: 150px;
+    transform: rotate(90deg);
+  }
+
+  50% {
+    width: 200px;
+    height: 200px;
+    transform: rotate(180deg);
+  }
+
+  75% {
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+  }
+
+  100% {
+    width: 100px;
+    height: 100px;
+    transform: rotate(360deg);
+  }
+}
